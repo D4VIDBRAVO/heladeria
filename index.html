@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Búnker del Cat</title>
+     <script>
+        // Función que se ejecuta cuando el DOM está listo
+        document.addEventListener("DOMContentLoaded", function() {
+            alert("Los Productos Del Bunker del Cat son 100% Natural, sin endulzantes ni edulcorantes añadidos. Disfruta de un sabor auténtico y puro, elaborado con ingredientes cuidadosamente seleccionados para ofrecerte lo mejor de la naturaleza. Ideal para quienes buscan una opción saludable, libre de aditivos y perfecta para mantener un estilo de vida equilibrado. ¡Descubre la diferencia de lo natural!");
+        });
+    </script>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            size: -10%;
+            margin: 0;
+            padding: 5px;
+            background-image: url('ruta11.gif');
+            background-repeat: no-repeat;
+            background-size: cover ;
+            background-position: right left;
+            background-attachment: fixed;
+            border-radius: 20px;
+        }
+        header {
+            text-align: center;
+            padding: -10px;
+            border-radius: 20px;
+        }
+        header img {
+            width: 820px;
+            height:  200px;
+            border-radius: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            padding: 10px 10px;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            border-radius: 20px;
+        }
+        nav a {
+            
+            color: white;
+            text-decoration: none; /* Añade esta línea para eliminar el subrayado en los enlaces */
+            padding: 20px 20px; /* Añade padding a los enlaces */
+
+        }
+        nav button {
+            
+           background-image: url('ruta2.gif');
+            color: pink;
+            border: none;
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 10px;
+        }
+        nav button:hover {
+            background-color: white;
+            transform: scale(1.1);
+        }
+        nav button::before {
+            background-color: whitesmoke;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 80%;
+            transition: left 0.3s ease;
+        }
+        nav button:hover::before {
+            left: 100%;
+
+        }
+
+        .carousel {
+            
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            height: 490px;
+            margin: 10px auto;
+            width: 60%;
+            
+            
+        }
+        .carousel img {
+           
+            position: absolute;
+            transition: opacity 5s ease;
+            border-radius: 10 px;
+             min-width: 60%;
+            height: 96%;
+            transition: transform 3s ease-in-out;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 30px;
+        }
+        .carousel img:not(:first-child) {
+            opacity: 0;
+         
+        }
+
+        .carousel .slide {
+            min-width: 100%;
+            height: 80%;
+            transition: transform 1s ease-in-out;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .carousel .controls {
+            position: absolute;
+            top: 50%;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .controls button {
+            background-color: #656568;
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .controls button:hover {
+            background-color: black;
+        }
+        .aside-icons {
+            position: fixed;
+            top: 40%;
+            left: 180px;
+            transform: translateY(-40%);
+        }
+        .aside-icons a {
+            display: block;
+            margin: 10px 0;
+            width: 60px;
+            height: 60px;
+            color: white;
+            text-align: center;
+            font-size: 3em;
+             transition: left 0.3s ease;
+             background-image: url('ruta3.gif');
+        }
+
+        .aside-icons a:hover {
+            background-color: lightgrey;
+            transform: scale(1.1);
+            
+
+        }
+        footer {
+            background-image: url('pie.jpg');
+            background-size: ;
+            background-color: transparent;
+            text-align: center;
+            border-radius: 0px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 1px; /* Añadir padding para darle más espacio */
+            height: 55px;
+        }
+
+        footer h2 {
+        
+        background-image: url('pie.jpeg');
+        color: black;
+        text-align: center;
+        border-radius: 20px;
+        background-repeat: no-repeat;
+        background-position: center center;
+            
+
+
+        }
+
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-form input, .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 50%;
+        }
+        .contact-form button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .contact-form h2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+        }
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            display: inline-block;
+
+        }
+
+    </style>
+</head>
+<body>
+
+     
+    <header>
+        <img src="logobunker2.jpeg" alt="Logo Bunker">
+    </header>
+    <nav>
+        <button><a href="http://localhost/heladeria/index.html" target=""><h3>Helados</h3></a></button>
+        <button><a href="http://localhost/heladeria/index.html" target=""><h3>Frappe</h3></a></button>
+        <button><a href="http://localhost/heladeria/index.html" target=""><h3>Yogurt</h3></a></button>
+        <button><a href="http://localhost/heladeria/pedido.html" target="_blank"><h3>Haz Tu Pedido AQUI</h3></a></button>
+    </nav>
+    <div class="carousel">
+        <img src="imagen1.jpg" alt="Postre 1">
+        <img src="imagen2.jpg" alt="Postre 2">
+        <img src="imagen3.jpg" alt="Postre 3">
+        <img src="imagen4.jpg" alt="Postre 4">
+        <img src="imagen5.jpg" alt="Postre 5">
+        <img src="imagen6.jpg" alt="Postre 6">
+        <img src="imagen7.jpg" alt="Postre 7">
+        <img src="imagen8.jpg" alt="Postre 8">
+        <img src="imagen9.jpg" alt="Postre 9">
+        <img src="imagen10.jpg" alt="Postre 10">
+        <div class="controls">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+    <aside class="aside-icons">
+        <a href="https://wa.me/+584145620944" class="fab fa-whatsapp" target="_blank"></a>
+        <a href="https://facebook.com" class="fab fa-facebook" target="_blank"></a>
+        <a href="https://x.com/" class="fab fa-twitter social-icon" target="_blank"></a>
+        <a href="https://instagram.com" class="fab fa-instagram" target="_blank"></a>
+        <a href="https://linkedin.com" class="fab fa-linkedin" target="_blank"></a>
+        <a href="https://youtube.com" class="fab fa-youtube" target="_blank"></a>
+    </aside>
+
+    <footer>
+
+        <h2>"Helados cremosos y naturales, el placer que no puedes resistir. ¡Pruébalos ya!"</h2>
+
+       
+    </footer>
+
+ <div class="cookie-banner" id="cookie-banner">
+        Este sitio web utiliza cookies para asegurar que obtengas la mejor experiencia. <button onclick="acceptCookies()">Aceptar</button>
+</div>
+
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+        const nextButton = document.getElementById('next');
+        const prevButton = document.getElementById('prev');
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.opacity = i === index ? 1 : 0;
+            });
+        }
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }
+
+        function showPrevImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            showImage(currentIndex);
+        }
+
+        nextButton.addEventListener('click', showNextImage);
+        prevButton.addEventListener('click', showPrevImage);
+
+        setInterval(showNextImage, 10000); // Cambia cada 10 segundos
+
+
+    </script>
+
+     <script>
+        function acceptCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        window.onload = function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
+

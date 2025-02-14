@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Bunquer del Cat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-image: url('ruta.gif');
+            background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+            background-size: cover; /* Escala la imagen para que cubra todo el fondo */
+            background-position: center center; /* Centra la imagen en el fondo */
+            background-attachment: fixed; /* Fija la imagen de fondo */
+            border-radius: 20px; /* Añade bordes redondeados si es necesario */
+        }
+        header {
+            text-align: center;
+            padding: 1px;
+            border-radius: 20px; /* Añade bordes redondeados si es necesario */
+        }
+        header img {
+            width: 250px; /* Ajusta el tamaño del logo */
+            height: auto; /* Mantiene la proporción del logo */
+            border-radius: 20px; /* Añade bordes redondeados si es necesario */
+        }
+        header h1 {
+            margin: 0;
+            
+        }
+        nav {
+            background-color: 
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 20px; /* Añade bordes redondeados si es necesario */
+        
+        }
+
+        a{
+
+          background-color: #000000;
+            color: white;
+
+        }
+
+        nav button {
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            padding: 5px 15px;
+            margin: 5px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        nav button:hover {
+            background-color: ;
+            transform: scale(1.1);
+        }
+        nav button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s ease;
+        }
+        nav button:hover::before {
+            left: 100%;
+        }
+        .carousel {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            margin: 10px auto;
+            width: 75%;
+            border-radius: 10px;
+        }
+        .carousel img {
+            width: 30%;
+            height: 160%;
+            position: absolute;
+            transition: opacity 1s ease;
+            border-radius: 20px; /* Añade bordes redondeados si es necesario */
+        }
+        .carousel img:not(:first-child) {
+            opacity: 0;
+            background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+            border-radius: 20px; /* Añade bordes redondeados si es necesario */
+        }
+        .carousel .controls {
+            position: absolute;
+            top: 50%;
+            width: 50%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            border-radius: 20px; /* Añade bordes redondeados si es necesario */
+        }
+        .controls button {
+            background-color: #656568;
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .controls button:hover {
+            background-color: black;
+        }
+        .aside-icons {
+            position: fixed;
+            top: 50%;
+            left: 150px;
+            transform: translateY(-50%);
+        }
+        .aside-icons a {
+            display: block;
+            margin: 10px 0;
+            width: 60px; /* Tamaño más grande de los iconos */
+            height: 60px; /* Tamaño más grande de los iconos */
+            color: #fff; /* Color de los iconos */
+            text-align: center;
+            font-size: 2em; /* Tamaño de fuente más grande para los iconos de Font Awesome */
+        }
+        }
+        footer {
+            background-color: 
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px; /* Añade bordes redondeados si es necesario */
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-form input, .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 50%;
+        }
+        .contact-form button {
+            background-color: #000000;;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+
+        }
+        .contact-form h2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logobunker.jpeg" alt="Logo Bunker">
+    </header>
+   <nav>
+        <button><a href="index.html" >Inicio</button></a>
+        <button>Helados</button>
+        <button>Frappe</button>
+        <button>Yogurt</button>
+        
+    </nav>
+
+        <aside class="aside-icons">
+        <a href="https://wa.me/04145620944" class="fab fa-whatsapp"></a>
+        <a href="https://facebook.com" class="fab fa-facebook"></a>
+        <a href="https://twitter.com" class="fab fa-twitter"></a>
+        <a href="https://instagram.com" class="fab fa-instagram"></a>
+        <a href="https://linkedin.com" class="fab fa-linkedin"></a>
+        <a href="https://youtube.com" class="fab fa-youtube"></a>
+        
+    </aside>
+    
+    <footer>
+        <div class="contact-form">
+            <h2>Pedidos</h2>
+            <input type="text" placeholder="Tu nombre">
+            <input type="email" placeholder="Tu correo">
+            <input type="email" placeholder="Tu Teléfono">
+            <textarea placeholder="Tu Pedido"></textarea>
+            <button>Enviar</button>
+        </div>
+    </footer>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+        const nextButton = document.getElementById('next');
+        const prevButton = document.getElementById('prev');
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.opacity = i === index ? 1 : 0;
+            });
+        }
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }
+
+        function showPrevImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            showImage(currentIndex);
+        }
+
+        nextButton.addEventListener('click', showNextImage);
+        prevButton.addEventListener('click', showPrevImage);
+
+        setInterval(showNextImage, 10000); // Cambia cada 10 segundos
+    </script>
+</body>
+</html>
